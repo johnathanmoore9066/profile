@@ -3,6 +3,7 @@
 const state = {
     demographics: JSON.parse(localStorage.getItem('profileMeDemographics')) || {},
     scores: JSON.parse(localStorage.getItem('profileMeScores')) || {},
+    traitQuestionCounts: JSON.parse(localStorage.getItem('profileMeTraitCounts')) || {},
     currentQuizIndex: parseInt(localStorage.getItem('profileMeQuizIndex')) || 0,
     currentQuestionIndex: parseInt(localStorage.getItem('profileMeQuestionIndex')) || 0,
     quizOrder: ['quiz1_personality.json', 'quiz2_scenario.json', 'quiz3_absurdist.json'] // The sequence
@@ -11,6 +12,7 @@ const state = {
 function saveState() {
     localStorage.setItem('profileMeDemographics', JSON.stringify(state.demographics));
     localStorage.setItem('profileMeScores', JSON.stringify(state.scores));
+    localStorage.setItem('profileMeTraitCounts', JSON.stringify(state.traitQuestionCounts));
     localStorage.setItem('profileMeQuizIndex', state.currentQuizIndex);
     localStorage.setItem('profileMeQuestionIndex', state.currentQuestionIndex);
 }
@@ -18,11 +20,13 @@ function saveState() {
 function resetState() {
      localStorage.removeItem('profileMeDemographics');
      localStorage.removeItem('profileMeScores');
+     localStorage.removeItem('profileMeTraitCounts');
      localStorage.removeItem('profileMeQuizIndex');
      localStorage.removeItem('profileMeQuestionIndex');
      // Optionally clear the state object too if needed immediately
      state.demographics = {};
      state.scores = {};
+     state.traitQuestionCounts = {};
      state.currentQuizIndex = 0;
      state.currentQuestionIndex = 0;
 }
@@ -140,7 +144,16 @@ function displayQuestion(quizData) {
 }
 
 function handleAnswer(scores, quizData) {
-    // Add scores to the state
+    // Track how many questions affect each trait
+    for (const trait in scores) {
+        if (state.traitQuestionCounts.hasOwnProperty(trait)) {
+            state.traitQuestionCounts[trait]++;
+        } else {
+            state.traitQuestionCounts[trait] = 1;
+        }
+    }
+
+    // Add raw scores to the state
     for (const trait in scores) {
         if (state.scores.hasOwnProperty(trait)) {
             state.scores[trait] += scores[trait];
@@ -152,20 +165,17 @@ function handleAnswer(scores, quizData) {
     // Move to next question or next quiz
     state.currentQuestionIndex++;
     
-    // Check if there are more questions in the current quiz
     if (state.currentQuestionIndex < quizData.questions.length) {
-        // More questions in current quiz
         displayQuestion(quizData);
     } else {
-        // No more questions in current quiz, move to next quiz
-        state.currentQuestionIndex = 0; // Reset for the next quiz
-        state.currentQuizIndex++;      // Move to the next quiz file index
+        state.currentQuestionIndex = 0;
+        state.currentQuizIndex++;
         
-        // Check if there are more quizzes
         if (state.currentQuizIndex < state.quizOrder.length) {
-            loadQuiz(); // Load the next quiz file
+            loadQuiz();
         } else {
-            // All quizzes are completed
+            // Normalize scores before going to results
+            normalizeScores();
             window.location.href = 'results.html';
         }
     }
@@ -173,6 +183,15 @@ function handleAnswer(scores, quizData) {
     saveState();
 }
 
+// Add this new function to normalize scores
+function normalizeScores() {
+    for (const trait in state.scores) {
+        if (state.traitQuestionCounts[trait] > 0) {
+            // Normalize score to a 0-10 range
+            state.scores[trait] = (state.scores[trait] / state.traitQuestionCounts[trait]) * 10;
+        }
+    }
+}
 
 // --- Results Page Logic (results.html) ---
 async function setupResultsPage() {

@@ -6,19 +6,19 @@
         "id": "p1",
         "text": "When someone cuts you off in traffic, your immediate internal reaction is:",
         "options": [
-          { "value": "a", "text": "Intense, potentially colorful, rage.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
-          { "value": "b", "text": "Annoyance, but you let it go quickly.", "scores": { "SelfControl": 1 } },
-          { "value": "c", "text": "Analyze their driving for patterns of incompetence.", "scores": { "Orderliness": 1, "Cynicism": 1 } },
-          { "value": "d", "text": "Note their license plate, just in case.", "scores": { "DarkTriad_Machiavellianism": 1, "RiskAversion": -1 } }
+          { "value": "a", "text": "Intense, potentially colorful, rage.", "scores": { "Impulsivity": 3, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Annoyance, but you let it go quickly.", "scores": { "SelfControl": 3 } },
+          { "value": "c", "text": "Analyze their driving for patterns of incompetence.", "scores": { "Orderliness": 2, "Cynicism": 1 } },
+          { "value": "d", "text": "Note their license plate, just in case.", "scores": { "DarkTriad_Machiavellianism": 1, "RiskAversion": 2 } }
         ]
       },
       {
         "id": "p2",
         "text": "Your friend asks for your honest opinion about their new haircut. It's terrible. You:",
         "options": [
-          { "value": "a", "text": "Tell them it looks great, no need to hurt their feelings.", "scores": { "DarkTriad_Machiavellianism": 1, "RiskAversion": 1 } },
-          { "value": "b", "text": "Bluntly tell them it's awful and suggest a fix.", "scores": { "DarkTriad_Psychopathy": 1, "Impulsivity": 1 } },
-          { "value": "c", "text": "Say it's 'interesting' and change the subject.", "scores": { "SelfControl": 1, "Cynicism": 1 } },
+          { "value": "a", "text": "Tell them it looks great, no need to hurt their feelings.", "scores": { "DarkTriad_Machiavellianism": 1, "RiskAversion": 2 } },
+          { "value": "b", "text": "Bluntly tell them it's awful and suggest a fix.", "scores": { "DarkTriad_Psychopathy": 2, "Impulsivity": 1 } },
+          { "value": "c", "text": "Say it's 'interesting' and change the subject.", "scores": { "SelfControl": 2, "Cynicism": 1 } },
           { "value": "d", "text": "Ask them what they think first, then mirror their opinion.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } }
         ]
       },
@@ -26,20 +26,20 @@
         "id": "p3",
         "text": "You're at a party and notice someone you dislike. You:",
         "options": [
-          { "value": "a", "text": "Avoid them completely, even if it means leaving early.", "scores": { "RiskAversion": 2, "SelfControl": 1 } },
+          { "value": "a", "text": "Avoid them completely, even if it means leaving early.", "scores": { "RiskAversion": 3, "SelfControl": 1 } },
           { "value": "b", "text": "Engage them in conversation to gather information.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
-          { "value": "c", "text": "Subtly sabotage their social interactions.", "scores": { "DarkTriad_Psychopathy": 1, "Cynicism": 1 } },
-          { "value": "d", "text": "Make a scene to ensure everyone knows your feelings.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } }
+          { "value": "c", "text": "Subtly sabotage their social interactions.", "scores": { "DarkTriad_Psychopathy": 2, "Cynicism": 1 } },
+          { "value": "d", "text": "Make a scene to ensure everyone knows your feelings.", "scores": { "Impulsivity": 3, "DarkTriad_Psychopathy": 1 } }
         ]
       },
       {
         "id": "p4",
         "text": "When you're alone in a room, your thoughts tend to:",
         "options": [
-          { "value": "a", "text": "Race from one idea to the next, never settling.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
-          { "value": "b", "text": "Follow a structured pattern, like solving a puzzle.", "scores": { "Orderliness": 2, "SelfControl": 1 } },
-          { "value": "c", "text": "Dwell on past interactions and future possibilities.", "scores": { "DarkTriad_Machiavellianism": 1, "RiskAversion": 1 } },
-          { "value": "d", "text": "Question everyone's motives and intentions.", "scores": { "Cynicism": 2, "DarkTriad_Psychopathy": 1 } }
+          { "value": "a", "text": "Race from one idea to the next, never settling.", "scores": { "Impulsivity": 3, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Follow a structured pattern, like solving a puzzle.", "scores": { "Orderliness": 3, "SelfControl": 1 } },
+          { "value": "c", "text": "Dwell on past interactions and future possibilities.", "scores": { "DarkTriad_Machiavellianism": 2, "RiskAversion": 1 } },
+          { "value": "d", "text": "Question everyone's motives and intentions.", "scores": { "Cynicism": 3, "DarkTriad_Psychopathy": 1 } }
         ]
       },
       {
@@ -47,9 +47,9 @@
         "text": "When you make a mistake, your first thought is:",
         "options": [
           { "value": "a", "text": "How can I blame this on someone else?", "scores": { "DarkTriad_Psychopathy": 2, "DarkTriad_Machiavellianism": 1 } },
-          { "value": "b", "text": "What can I learn from this?", "scores": { "SelfControl": 2, "Orderliness": 1 } },
-          { "value": "c", "text": "This proves I'm fundamentally flawed.", "scores": { "Cynicism": 2, "RiskAversion": 1 } },
-          { "value": "d", "text": "How can I use this to my advantage later?", "scores": { "DarkTriad_Machiavellianism": 2, "Impulsivity": -1 } }
+          { "value": "b", "text": "What can I learn from this?", "scores": { "SelfControl": 3, "Orderliness": 1 } },
+          { "value": "c", "text": "This proves I'm fundamentally flawed.", "scores": { "Cynicism": 3, "RiskAversion": 1 } },
+          { "value": "d", "text": "How can I use this to my advantage later?", "scores": { "DarkTriad_Machiavellianism": 2, "Impulsivity": 1 } }
         ]
       },
       {
@@ -57,18 +57,18 @@
         "text": "Your internal monologue when waiting in line is:",
         "options": [
           { "value": "a", "text": "Calculating the most efficient way to cut in line.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
-          { "value": "b", "text": "Fuming about the incompetence of the system.", "scores": { "Impulsivity": 1, "Cynicism": 2 } },
-          { "value": "c", "text": "Planning your next three moves in detail.", "scores": { "Orderliness": 2, "SelfControl": 1 } },
-          { "value": "d", "text": "Wondering if everyone else is as bored as you are.", "scores": { "DarkTriad_Psychopathy": 1, "RiskAversion": 1 } }
+          { "value": "b", "text": "Fuming about the incompetence of the system.", "scores": { "Impulsivity": 2, "Cynicism": 2 } },
+          { "value": "c", "text": "Planning your next three moves in detail.", "scores": { "Orderliness": 3, "SelfControl": 1 } },
+          { "value": "d", "text": "Wondering if everyone else is as bored as you are.", "scores": { "DarkTriad_Psychopathy": 1, "RiskAversion": 2 } }
         ]
       },
       {
         "id": "p7",
         "text": "When someone succeeds where you failed, you think:",
         "options": [
-          { "value": "a", "text": "They must have cheated or had unfair advantages.", "scores": { "Cynicism": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "a", "text": "They must have cheated or had unfair advantages.", "scores": { "Cynicism": 3, "DarkTriad_Psychopathy": 1 } },
           { "value": "b", "text": "How can I use their success to further my own goals?", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
-          { "value": "c", "text": "Good for them, I'll try harder next time.", "scores": { "SelfControl": 2, "RiskAversion": -1 } },
+          { "value": "c", "text": "Good for them, I'll try harder next time.", "scores": { "SelfControl": 3, "RiskAversion": 1 } },
           { "value": "d", "text": "This is unacceptable, I need to do something about this.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } }
         ]
       },
@@ -76,10 +76,10 @@
         "id": "p8",
         "text": "Your reaction to unexpected good news is:",
         "options": [
-          { "value": "a", "text": "Immediate suspicion about hidden motives.", "scores": { "Cynicism": 2, "DarkTriad_Machiavellianism": 1 } },
+          { "value": "a", "text": "Immediate suspicion about hidden motives.", "scores": { "Cynicism": 3, "DarkTriad_Machiavellianism": 1 } },
           { "value": "b", "text": "Calculating how to maximize the benefit.", "scores": { "Orderliness": 2, "DarkTriad_Machiavellianism": 1 } },
-          { "value": "c", "text": "Uncontrollable excitement and celebration.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
-          { "value": "d", "text": "Cautious optimism while checking for catches.", "scores": { "RiskAversion": 2, "SelfControl": 1 } }
+          { "value": "c", "text": "Uncontrollable excitement and celebration.", "scores": { "Impulsivity": 3, "DarkTriad_Psychopathy": 1 } },
+          { "value": "d", "text": "Cautious optimism while checking for catches.", "scores": { "RiskAversion": 3, "SelfControl": 1 } }
         ]
       }
     ]
