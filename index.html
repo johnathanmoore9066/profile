@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Assessment Intake</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #8b0000;
+            --text-color: #2c2c2c;
+            --border-color: #8b0000;
+            --background-color: #f8f8f8;
+            --paper-color: #fff;
+            --stamp-color: rgba(139, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+            background-image: 
+                linear-gradient(90deg, var(--stamp-color) 1px, transparent 1px),
+                linear-gradient(var(--stamp-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: var(--paper-color);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                var(--border-color) 2px,
+                var(--border-color) 4px
+            );
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 3px double var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            background-color: var(--paper-color);
+            font-family: 'Special Elite', monospace;
+            font-size: 16px;
+            color: var(--text-color);
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-left: 4px solid var(--border-color);
+            background-color: rgba(139, 0, 0, 0.05);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--paper-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            font-family: 'Special Elite', monospace;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background-color: rgba(139, 0, 0, 0.05);
+            border-left: 4px solid var(--border-color);
+        }
+
+        button::before {
+            content: "▶";
+            position: absolute;
+            left: 10px;
+            color: var(--border-color);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        button:hover::before {
+            opacity: 1;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 120px;
+            color: rgba(139, 0, 0, 0.1);
+            pointer-events: none;
+            z-index: -1;
+            white-space: nowrap;
+            font-family: 'Special Elite', cursive;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Share Tech Mono', monospace;
+            color: #666;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: #666;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                background-image: none;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            .watermark {
+                display: none;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">CONFIDENTIAL</div>
+    <div class="container">
+        <h1>Subject Intake Form</h1>
+        <div class="form-header">
+            <p>Case #: <span id="case-number"></span></p>
+            <p>Date: <span id="current-date"></span></p>
+        </div>
+        <form id="demographics-form">
+            <div class="form-group">
+                <label for="alias">Subject Alias</label>
+                <input type="text" id="alias" name="alias" required placeholder="Enter subject alias">
+            </div>
+            <div class="form-group">
+                <label for="age-range">Age Range</label>
+                <select id="age-range" name="age-range" required>
+                    <option value="">Select age range</option>
+                    <option value="18-24">18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-44">35-44</option>
+                    <option value="45-54">45-54</option>
+                    <option value="55-64">55-64</option>
+                    <option value="65+">65+</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location-type">Environment Type</label>
+                <select id="location-type" name="location-type" required>
+                    <option value="">Select environment</option>
+                    <option value="Urban">Urban</option>
+                    <option value="Suburban">Suburban</option>
+                    <option value="Rural">Rural</option>
+                </select>
+            </div>
+            <button type="submit">Begin Assessment</button>
+        </form>
+        <div class="form-footer">
+            <p>CONFIDENTIAL - FOR OFFICIAL USE ONLY</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize the form with case number and date
+        document.addEventListener('DOMContentLoaded', () => {
+            const caseNumber = document.getElementById('case-number');
+            const currentDate = document.getElementById('current-date');
+            
+            // Generate a case number
+            const date = new Date();
+            const random = Math.floor(Math.random() * 10000);
+            caseNumber.textContent = `PR-${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}-${random.toString().padStart(4, '0')}`;
+            
+            // Set current date in official format
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            currentDate.textContent = date.toLocaleDateString('en-US', options);
+        });
+    </script>
+</body>
+</html>

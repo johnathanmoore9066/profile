@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Profile Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #8b0000;
+            --text-color: #2c2c2c;
+            --border-color: #8b0000;
+            --background-color: #f8f8f8;
+            --paper-color: #fff;
+            --stamp-color: rgba(139, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+            background-image: 
+                linear-gradient(90deg, var(--stamp-color) 1px, transparent 1px),
+                linear-gradient(var(--stamp-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .report-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px double var(--border-color);
+            position: relative;
+        }
+
+        .report-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .report-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #666;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .report-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: var(--paper-color);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .report-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                var(--border-color) 2px,
+                var(--border-color) 4px
+            );
+        }
+
+        .report-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+
+        .subject-info p {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .subject-info p::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--border-color);
+        }
+
+        .trait-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .trait-card {
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            background-color: var(--paper-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trait-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 20px 20px 0;
+            border-color: transparent var(--border-color) transparent transparent;
+        }
+
+        .trait-card.high {
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .trait-card.medium {
+            border-left: 4px solid #8b4513;
+        }
+
+        .trait-card.low {
+            border-left: 4px solid #006400;
+        }
+
+        .trait-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .trait-score {
+            font-weight: bold;
+            margin: 10px 0;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .trait-label {
+            font-style: italic;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .risk-evaluation-content {
+            padding: 15px;
+        }
+
+        .risk-level {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(139, 0, 0, 0.05);
+        }
+
+        .risk-level.high {
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .risk-level.medium {
+            border-left: 4px solid #8b4513;
+        }
+
+        .risk-level h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .recommendations-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .recommendations-content li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .recommendations-content li::before {
+            content: "▶";
+            color: var(--border-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .glossary-section {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: var(--paper-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .glossary-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .glossary-term {
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            background-color: var(--paper-color);
+        }
+
+        .glossary-term h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .glossary-term p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .report-footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 3px double var(--border-color);
+            font-size: 14px;
+            color: #666;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 120px;
+            color: rgba(139, 0, 0, 0.1);
+            pointer-events: none;
+            z-index: -1;
+            white-space: nowrap;
+            font-family: 'Special Elite', cursive;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                background-image: none;
+            }
+
+            .report-section {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            .trait-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .watermark {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">CONFIDENTIAL</div>
+    <div id="report-container">
+        <!-- Content will be dynamically generated by script.js -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize the results page when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', setupResultsPage);
+    </script>
+</body>
+</html>

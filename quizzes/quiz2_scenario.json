@@ -1,0 +1,86 @@
+{
+    "quizTitle": "Module 2: Situational Response",
+    "quizType": "Behavioral Scenario",
+    "questions": [
+      {
+        "id": "s1",
+        "text": "You find a wallet on the street, containing $100 cash and an ID.",
+        "options": [
+          { "value": "a", "text": "Take the cash, ditch the wallet.", "scores": { "DarkTriad_Psychopathy": 1, "Impulsivity": 1, "Conformity": -2 } },
+          { "value": "b", "text": "Try to return the wallet and cash to the owner.", "scores": { "Conformity": 1, "SelfControl": 1 } },
+          { "value": "c", "text": "Leave it where it is. Not your problem.", "scores": { "Cynicism": 1, "RiskAversion": 1 } },
+          { "value": "d", "text": "Take it to the police station.", "scores": { "Conformity": 2 } }
+        ]
+      },
+      {
+        "id": "s2",
+        "text": "You're at a restaurant and the waiter brings you the wrong order. You:",
+        "options": [
+          { "value": "a", "text": "Eat it anyway to avoid confrontation.", "scores": { "RiskAversion": 2, "Conformity": 1 } },
+          { "value": "b", "text": "Demand to speak to the manager immediately.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Politely point out the mistake and ask for the correct order.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Use this as an opportunity to get a free meal.", "scores": { "DarkTriad_Machiavellianism": 2, "Cynicism": 1 } }
+        ]
+      },
+      {
+        "id": "s3",
+        "text": "Your coworker takes credit for your idea in a meeting. You:",
+        "options": [
+          { "value": "a", "text": "Immediately call them out in front of everyone.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Wait for a private moment to discuss it with them.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "c", "text": "Document everything and plan your revenge carefully.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "d", "text": "Let it go, but never trust them again.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "s4",
+        "text": "You're running late for an important appointment. You:",
+        "options": [
+          { "value": "a", "text": "Speed and run red lights to make up time.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Call ahead to explain and ask to reschedule.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "c", "text": "Blame traffic and prepare an elaborate excuse.", "scores": { "DarkTriad_Machiavellianism": 2, "Cynicism": 1 } },
+          { "value": "d", "text": "Take your time and arrive whenever.", "scores": { "DarkTriad_Psychopathy": 1, "Conformity": -2 } }
+        ]
+      },
+      {
+        "id": "s5",
+        "text": "You discover your friend has been lying to you. You:",
+        "options": [
+          { "value": "a", "text": "Confront them immediately with evidence.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Pretend you don't know and gather more information.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "c", "text": "Give them a chance to come clean on their own.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Cut them off completely without explanation.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "s6",
+        "text": "You're in a group project and someone isn't pulling their weight. You:",
+        "options": [
+          { "value": "a", "text": "Do their work to avoid conflict.", "scores": { "RiskAversion": 2, "Conformity": 1 } },
+          { "value": "b", "text": "Call them out publicly in the next meeting.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Document their lack of contribution for later use.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "d", "text": "Work around them and let them fail on their own.", "scores": { "Cynicism": 1, "SelfControl": 1 } }
+        ]
+      },
+      {
+        "id": "s7",
+        "text": "You receive an email from a stranger asking for sensitive information. You:",
+        "options": [
+          { "value": "a", "text": "Reply immediately with the requested information.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Forward it to IT and mark it as spam.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "c", "text": "Use it as an opportunity to gather information about them.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "d", "text": "Assume it's a scam and delete it without reading.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "s8",
+        "text": "You're offered a promotion that requires moving to a new city. You:",
+        "options": [
+          { "value": "a", "text": "Accept immediately without considering the consequences.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "b", "text": "Negotiate for better terms before accepting.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "c", "text": "Take time to carefully weigh the pros and cons.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Decline, fearing the unknown risks.", "scores": { "RiskAversion": 2, "Cynicism": 1 } }
+        ]
+      }
+    ]
+  }

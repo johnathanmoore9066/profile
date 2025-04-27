@@ -1,0 +1,86 @@
+{
+    "quizTitle": "Module 3: Absurdist Scenarios",
+    "quizType": "Hypothetical Absurdism",
+    "questions": [
+      {
+        "id": "a1",
+        "text": "You wake up to find you can read minds, but only of people who are currently eating pizza. You:",
+        "options": [
+          { "value": "a", "text": "Open a pizza restaurant to exploit this power.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Use it to blackmail people into giving you free pizza.", "scores": { "DarkTriad_Psychopathy": 2, "Impulsivity": 1 } },
+          { "value": "c", "text": "Avoid pizza places to respect people's privacy.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Assume everyone is thinking about how to kill you.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a2",
+        "text": "A genie offers you three wishes, but each wish must make someone else's life worse. You:",
+        "options": [
+          { "value": "a", "text": "Wish for world peace, knowing it will cause chaos.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Wish for unlimited wishes to maximize suffering.", "scores": { "DarkTriad_Psychopathy": 2, "Impulsivity": 1 } },
+          { "value": "c", "text": "Wish to undo the genie's existence.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Decline, fearing the genie's hidden agenda.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a3",
+        "text": "You discover your cat has been running a successful underground gambling ring. You:",
+        "options": [
+          { "value": "a", "text": "Take over the operation and expand it.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Turn your cat in to the authorities.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "c", "text": "Blackmail your cat for a cut of the profits.", "scores": { "DarkTriad_Psychopathy": 2, "Impulsivity": 1 } },
+          { "value": "d", "text": "Assume this is a test by the government.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a4",
+        "text": "You find out your reflection has been living a separate life when you're not looking. You:",
+        "options": [
+          { "value": "a", "text": "Try to communicate and form an alliance.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Smash all mirrors to prevent further betrayal.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Document its activities for scientific study.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Assume it's plotting to replace you.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a5",
+        "text": "Your houseplants start giving you stock market advice. You:",
+        "options": [
+          { "value": "a", "text": "Create a hedge fund based on their predictions.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Sell all your plants in a panic.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Research plant communication scientifically.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Assume they're trying to bankrupt you.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a6",
+        "text": "You discover your shadow has been attending parties without you. You:",
+        "options": [
+          { "value": "a", "text": "Train it to be your social double.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Try to catch it in the act and confront it.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Set up cameras to document its activities.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Stay indoors to prevent further betrayal.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a7",
+        "text": "Your morning coffee starts giving you life advice. You:",
+        "options": [
+          { "value": "a", "text": "Start a podcast featuring your coffee's wisdom.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Throw it out and switch to tea immediately.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Record its advice for later analysis.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Assume it's trying to manipulate you.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      },
+      {
+        "id": "a8",
+        "text": "You find out your dreams are actually real events in a parallel universe. You:",
+        "options": [
+          { "value": "a", "text": "Start a business selling dream interpretations.", "scores": { "DarkTriad_Machiavellianism": 2, "Orderliness": 1 } },
+          { "value": "b", "text": "Try to stay awake forever to prevent chaos.", "scores": { "Impulsivity": 2, "DarkTriad_Psychopathy": 1 } },
+          { "value": "c", "text": "Document your dreams for scientific study.", "scores": { "SelfControl": 2, "Conformity": 1 } },
+          { "value": "d", "text": "Assume you're being watched by dream police.", "scores": { "Cynicism": 2, "RiskAversion": 1 } }
+        ]
+      }
+    ]
+  }

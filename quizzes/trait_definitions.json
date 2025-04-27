@@ -1,0 +1,294 @@
+{
+    "traits": {
+        "DarkTriad_Psychopathy": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject demonstrates exceptional emotional stability and empathy. Unusual for general population.",
+                    "label": "Exceptional Emotional Control"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject shows typical emotional responses and social awareness. Within normal parameters.",
+                    "label": "Standard Emotional Response"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits concerning patterns of emotional detachment and risk-seeking behavior. Monitor closely.",
+                    "label": "Elevated Risk Profile"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays significant psychopathic tendencies. Extreme caution advised.",
+                    "label": "High-Risk Subject"
+                }
+            ],
+            "category": "Personality Profile",
+            "severity": "High",
+            "recommendations": [
+                "Maintain visual contact during interactions",
+                "Document all unusual behavior patterns",
+                "Avoid isolated situations"
+            ]
+        },
+        "DarkTriad_Machiavellianism": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject shows remarkable transparency and honesty in interactions. Highly unusual pattern.",
+                    "label": "Exceptional Transparency"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject demonstrates standard levels of social awareness and strategy.",
+                    "label": "Standard Social Awareness"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits advanced strategic thinking and manipulation patterns.",
+                    "label": "Strategic Thinker"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays master-level manipulation capabilities. Extreme caution required.",
+                    "label": "Master Manipulator"
+                }
+            ],
+            "category": "Behavioral Analysis",
+            "severity": "High",
+            "recommendations": [
+                "Verify all statements independently",
+                "Monitor for patterns of deception",
+                "Maintain detailed interaction logs"
+            ]
+        },
+        "Impulsivity": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject demonstrates exceptional self-control and deliberation.",
+                    "label": "Exceptional Self-Control"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject shows standard levels of impulse control.",
+                    "label": "Standard Impulse Control"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits concerning patterns of impulsive behavior.",
+                    "label": "Elevated Impulsivity"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays extreme impulsive tendencies. High risk of unpredictable behavior.",
+                    "label": "Extreme Impulsivity"
+                }
+            ],
+            "category": "Behavioral Control",
+            "severity": "Medium",
+            "recommendations": [
+                "Monitor for sudden behavioral changes",
+                "Document all impulsive actions",
+                "Maintain structured interaction protocols"
+            ]
+        },
+        "SelfControl": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject shows concerning lack of self-regulation.",
+                    "label": "Poor Self-Regulation"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject demonstrates standard levels of self-control.",
+                    "label": "Standard Self-Control"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits strong self-discipline and control.",
+                    "label": "Strong Self-Discipline"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays exceptional self-control and regulation.",
+                    "label": "Exceptional Self-Control"
+                }
+            ],
+            "category": "Behavioral Control",
+            "severity": "Medium",
+            "recommendations": [
+                "Monitor for signs of stress",
+                "Document control mechanisms",
+                "Note any changes in regulation patterns"
+            ]
+        },
+        "Orderliness": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject shows significant disorganization and chaos tolerance.",
+                    "label": "High Chaos Tolerance"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject demonstrates standard organizational patterns.",
+                    "label": "Standard Organization"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits strong preference for order and structure.",
+                    "label": "Strong Order Preference"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays extreme need for order and control.",
+                    "label": "Extreme Order Need"
+                }
+            ],
+            "category": "Behavioral Patterns",
+            "severity": "Low",
+            "recommendations": [
+                "Note any deviations from established patterns",
+                "Document organizational methods",
+                "Monitor for stress in chaotic situations"
+            ]
+        },
+        "Cynicism": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject shows unusual levels of trust and optimism.",
+                    "label": "Exceptional Trust"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject demonstrates standard levels of skepticism.",
+                    "label": "Standard Skepticism"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits elevated levels of distrust and cynicism.",
+                    "label": "Elevated Distrust"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays extreme cynicism and distrust.",
+                    "label": "Extreme Cynicism"
+                }
+            ],
+            "category": "Social Interaction",
+            "severity": "Medium",
+            "recommendations": [
+                "Document trust-related behaviors",
+                "Monitor for patterns of suspicion",
+                "Note any changes in trust levels"
+            ]
+        },
+        "RiskAversion": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject shows concerning risk-seeking behavior.",
+                    "label": "Risk-Seeking"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject demonstrates standard risk assessment patterns.",
+                    "label": "Standard Risk Assessment"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits elevated caution and risk aversion.",
+                    "label": "Elevated Caution"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays extreme risk aversion and caution.",
+                    "label": "Extreme Caution"
+                }
+            ],
+            "category": "Behavioral Analysis",
+            "severity": "Medium",
+            "recommendations": [
+                "Monitor risk-taking behaviors",
+                "Document decision-making patterns",
+                "Note any changes in risk tolerance"
+            ]
+        },
+        "Conformity": {
+            "ranges": [
+                {
+                    "min": -10,
+                    "max": 0,
+                    "description": "Subject shows extreme non-conformist tendencies.",
+                    "label": "Extreme Non-Conformity"
+                },
+                {
+                    "min": 1,
+                    "max": 3,
+                    "description": "Subject demonstrates standard social conformity.",
+                    "label": "Standard Conformity"
+                },
+                {
+                    "min": 4,
+                    "max": 6,
+                    "description": "Subject exhibits strong conformity to social norms.",
+                    "label": "Strong Conformity"
+                },
+                {
+                    "min": 7,
+                    "max": 10,
+                    "description": "Subject displays extreme conformity to authority and rules.",
+                    "label": "Extreme Conformity"
+                }
+            ],
+            "category": "Social Behavior",
+            "severity": "Low",
+            "recommendations": [
+                "Monitor for changes in social behavior",
+                "Document conformity patterns",
+                "Note any resistance to authority"
+            ]
+        }
+    },
+    "reportTemplate": {
+        "header": "SUBJECT PROFILE ANALYSIS REPORT",
+        "sections": [
+            "IDENTIFICATION",
+            "BEHAVIORAL ASSESSMENT",
+            "RISK EVALUATION",
+            "RECOMMENDATIONS"
+        ],
+        "footer": "CONFIDENTIAL - FOR OFFICIAL USE ONLY"
+    }
+} 

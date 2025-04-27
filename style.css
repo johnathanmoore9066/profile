@@ -1,0 +1,99 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1a1a1a;
+    color: #0f0; /* Classic terminal green */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #000;
+    border: 1px solid #0f0;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+h1, h2 {
+    color: #0f0;
+    border-bottom: 1px solid #0f0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 10px;
+    color: #0f0;
+}
+
+input[type="text"], select {
+    background-color: #111;
+    border: 1px solid #0f0;
+    color: #0f0;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+button {
+    background-color: #0f0;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0a0;
+}
+
+#options-container button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    background-color: #222; /* Darker buttons for options */
+    color: #0f0;
+    border: 1px solid #0f0;
+}
+
+#options-container button:hover {
+    background-color: #333;
+    border-color: #fff; /* Highlight border on hover */
+    color: #fff;
+}
+
+#scores-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#scores-list li {
+    margin-bottom: 5px;
+    border-left: 3px solid #0f0;
+    padding-left: 10px;
+}
+
+#progress-indicator {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Blinking cursor effect for fun */
+h1::after {
+ content: '_';
+ animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+ 50% { opacity: 0; }
+}
