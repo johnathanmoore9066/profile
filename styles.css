@@ -1,0 +1,45 @@
+.profile-analysis {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.analysis-text {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.analysis-text p {
+    margin-bottom: 1rem;
+}
+
+.analysis-text p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .profile-analysis {
+        flex-direction: row;
+    }
+    
+    .chart-container {
+        flex: 1;
+        margin-right: 2rem;
+    }
+    
+    .analysis-text {
+        flex: 1;
+    }
+} 

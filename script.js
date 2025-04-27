@@ -241,9 +241,14 @@ async function setupResultsPage() {
             </section>
 
             <section class="report-section">
-                <h2>${traitDefinitions.reportTemplate.sections[3]}</h2>
-                <div class="recommendations">
-                    ${generateRecommendations(state.scores, traitDefinitions)}
+                <h2>Profile Analysis</h2>
+                <div class="profile-analysis">
+                    <div class="chart-container">
+                        <canvas id="traitChart"></canvas>
+                    </div>
+                    <div class="analysis-text">
+                        ${generateProfileAnalysis(state.scores, traitDefinitions)}
+                    </div>
                 </div>
             </section>
 
@@ -258,6 +263,9 @@ async function setupResultsPage() {
                 <p>${traitDefinitions.reportTemplate.footer}</p>
             </div>
         `;
+
+        // Create the chart after the DOM is updated
+        createTraitChart(state.scores, traitDefinitions);
     }
 }
 
@@ -417,6 +425,101 @@ function findTraitRange(score, ranges) {
         }
     }
     return ranges[ranges.length - 1]; // Return highest range if score exceeds all ranges
+}
+
+function createTraitChart(scores, definitions) {
+    const ctx = document.getElementById('traitChart').getContext('2d');
+    const traits = Object.keys(scores);
+    const userScores = traits.map(trait => scores[trait]);
+    const averageScores = traits.map(trait => 5); // Assuming 5 is the average score
+
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: traits.map(trait => trait.replace(/_/g, ' ')),
+            datasets: [
+                {
+                    label: 'Your Scores',
+                    data: userScores,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Average Scores',
+                    data: averageScores,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2
+                }
+            ]
+        },
+        options: {
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 10,
+                    ticks: {
+                        stepSize: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
+
+function generateProfileAnalysis(scores, definitions) {
+    const analysis = [];
+    const highTraits = [];
+    const lowTraits = [];
+    
+    // Categorize traits
+    for (const trait in scores) {
+        if (scores[trait] >= 7) {
+            highTraits.push(trait);
+        } else if (scores[trait] <= 3) {
+            lowTraits.push(trait);
+        }
+    }
+
+    // Generate analysis text
+    if (highTraits.length > 0) {
+        analysis.push(`Your profile shows elevated levels in ${highTraits.map(t => t.replace(/_/g, ' ')).join(', ')}.`);
+    }
+    
+    if (lowTraits.length > 0) {
+        analysis.push(`You demonstrate lower than average tendencies in ${lowTraits.map(t => t.replace(/_/g, ' ')).join(', ')}.`);
+    }
+
+    // Add specific observations
+    if (scores.DarkTriad_Psychopathy > 7) {
+        analysis.push("Your responses suggest a tendency towards impulsive decision-making and a lower concern for social norms.");
+    }
+    
+    if (scores.SelfControl > 7) {
+        analysis.push("You show strong self-regulation and thoughtful consideration in your responses.");
+    }
+    
+    if (scores.Orderliness > 7) {
+        analysis.push("Your answers indicate a preference for structure and systematic thinking.");
+    }
+
+    // Add overall assessment
+    const averageScore = Object.values(scores).reduce((a, b) => a + b, 0) / Object.keys(scores).length;
+    if (averageScore > 7) {
+        analysis.push("Overall, your profile shows above-average intensity in most measured traits.");
+    } else if (averageScore < 3) {
+        analysis.push("Overall, your profile shows below-average intensity in most measured traits.");
+    } else {
+        analysis.push("Overall, your profile shows a balanced distribution of traits.");
+    }
+
+    return analysis.map(text => `<p>${text}</p>`).join('');
 }
 
 // Set current date
